@@ -1,0 +1,4 @@
+
+Whole program is written in Java using JDBC to connect with database.
+In general- database contains outcomes, incomes and reminder table.
+This program is written to maintain home incomes and outcomes. It will help to plan yearly budget, and to savings plan.
