@@ -1,3 +1,5 @@
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -7,7 +9,9 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
+import java.util.spi.CalendarDataProvider;
 
 public class Datasource extends Data {
 
@@ -17,6 +21,11 @@ public class Datasource extends Data {
 
     public boolean open() {
         try {
+            //Checking current directory on disk
+            Path currentRelativePath = Paths.get("");
+            String s = currentRelativePath.toAbsolutePath().toString();
+            System.out.println(s);
+
             conn = DriverManager.getConnection(CONNECTION_STRING);
             System.out.println("Connected");
             return true;
@@ -72,6 +81,7 @@ public class Datasource extends Data {
         DateTimeFormatter f = DateTimeFormatter.ofPattern(DATE_FORMAT);
         try {
             LocalDate ld = LocalDate.parse(date, f);
+//            Date someDate = ld;
             //  System.out.println("Tested and passed date : "+ ld);
             return true;
         } catch (DateTimeParseException e) {
@@ -169,25 +179,39 @@ public class Datasource extends Data {
 
     public void addExpense(String date, int category, float amount, String name, String startDate, String endDate) {
         if (findOutCatByNumber(Datasource.TABLE_CATOUTCOMES, category)) {
-            String insertExecution = ADD_EXPENSE_SHORT_1 + Datasource.TABLE_OUTCOMES +
-                    "(" + Datasource.COLUMN_OUTCOMES_DATE + "," +
-                    Datasource.COLUMN_OUTCOMES_CATOUT + "," +
-                    Datasource.COLUMN_OUTCOMES_AMOUNT + "," +
-                    Datasource.COLUMN_OUTCOMES_COMMENT + "," +
-                    Datasource.COLUMN_OUTCOMES_STARTDATE + "," +
-                    Datasource.COLUMN_OUTCOMES_ENDDATE + ") " +
-                    "VALUES('" + date + "'," + category + "," + amount + ",'" + name + "'," + startDate + "," + endDate + ")";
-            try {
-                Statement statement = conn.createStatement();
-                statement.execute(insertExecution);
-            } catch (SQLException e) {
-                System.out.println("Error while add expense: " + e.getMessage());
-            }
-        } else {
-            System.out.println("Cannot execute query. Outcome category wasn't found. Choose " + category + ", available:");
-            printCategories(Datasource.TABLE_CATOUTCOMES);
+            Calendar calendar = Calendar.getInstance();
+            DateTimeFormatter f = DateTimeFormatter.ofPattern(DATE_FORMAT);
+//            try {
+//                LocalDate tempDate = LocalDate.parse(startDate, f);
+//                LocalDate finishDate = LocalDate.parse(endDate, f);
+//                tempDate.a
+//
+//            } catch (DateTimeParseException e) {
+//                System.out.println("Cannot convert dates infto DATE format.");
+//            }
+
+
+//        }
+        String insertExecution = ADD_EXPENSE_SHORT_1 + Datasource.TABLE_OUTCOMES +
+                "(" + Datasource.COLUMN_OUTCOMES_DATE + "," +
+                Datasource.COLUMN_OUTCOMES_CATOUT + "," +
+                Datasource.COLUMN_OUTCOMES_AMOUNT + "," +
+                Datasource.COLUMN_OUTCOMES_COMMENT + "," +
+                Datasource.COLUMN_OUTCOMES_STARTDATE + "," +
+                Datasource.COLUMN_OUTCOMES_ENDDATE + ") " +
+                "VALUES('" + date + "'," + category + "," + amount + ",'" + name + "'," + startDate + "," + endDate + ")";
+        try {
+            Statement statement = conn.createStatement();
+            statement.execute(insertExecution);
+        } catch (SQLException e) {
+            System.out.println("Error while add expense: " + e.getMessage());
         }
+    } else{
+        System.out.println("Cannot execute query. Outcome category wasn't found. Choose " + category + ", available:");
+        printCategories(Datasource.TABLE_CATOUTCOMES);
     }
+
+}
 
     public void printExpenseContinous() {
         try (Statement statement = conn.createStatement();
@@ -233,5 +257,18 @@ public class Datasource extends Data {
         }
     }
 
+    /////////////////////VIEWS
+
+    public boolean createViewForExpenses() {
+        try (Statement statement = conn.createStatement()) {
+            statement.execute(CREATE_EXPENSE_VIEW);
+            return true;
+        } catch (SQLException e) {
+            System.out.println("Create View failed: " + e.getMessage());
+            return false;
+        }
+    }
+
 
 }
+

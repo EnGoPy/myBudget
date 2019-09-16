@@ -128,8 +128,6 @@ public class Main {
         System.out.println("NAME : ");
         name = sc.next();
         name += sc.nextLine();
-
-
         if (cont) {
             String startDate;
             String endDate;
@@ -145,7 +143,6 @@ public class Main {
             System.out.println("Your input: " + date + "\t" + category + "\t" + amount + "\t" + name);
             datasource.addExpense(date, category, amount, name);
         }
-
     }
 
     private static String dateCorrectInput() {
