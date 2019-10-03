@@ -2,16 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="838199fd-2787-4fa3-b50d-6ab5f61e8324" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_199.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/Mappers/DBvsOperationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/Mappers/DateMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/controller/model/CategoryModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/controller/model/IncomeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/controller/model/OutcomeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/dao/InCategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/dao/IncomeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/dao/OutCategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/dao/OutcomeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/dao/categoryData/CategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/dao/categoryData/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/dao/operationData/OperationDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/dao/operationData/OperationFiltering.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/dao/operationData/entity/Operation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/database/DatabaseSettings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/database/DatabaseUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/database/TableCoreDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/database/TableQueries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/exception/BudgetConnectionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/exception/BudgetException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/exception/DateParsingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/wojtasik/myBudget/exception/OperationDatabaseAccessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MyBudget.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyBudget.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyBudget/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyBudget/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyBudget/Data/myBudget.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyBudget/Data/myBudget.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyBudget/Datasource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyBudget/Datasource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyBudget/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyBudget/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyBudget/myBudget.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyBudget/myBudget.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Datasource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Datasource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/myBudget.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/myBudget.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Data.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Datasource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/ImportData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/IncManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/MyBudget.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/OutManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/myBudget.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/sqlite-jdbc-3.27.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,23 +48,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="MyBudget" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>--&gt;</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>\t</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,23 +78,23 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558452819109" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/com" />
+      <recent name="$PROJECT_DIR$/src/com/javapractice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="com.javapractice.files" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com" />
-      <recent name="$PROJECT_DIR$/src/com/javapractice" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -102,7 +127,7 @@
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -128,86 +153,21 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>javafx-11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>10 (1)</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>MyBudget</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>sqlite-jdbc-3.27.2.1</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="MyBudget" type="b2602c69:ProjectViewProjectNode" />
+        <item name="MyBudget" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
   </component>
 </project>
